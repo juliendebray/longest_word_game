@@ -1,0 +1,9 @@
+<h1>Grids#game</h1>
+<p>Your grid is:</p>
+<h2><%= @grid %></h2>
+<form action="/score" method="POST">
+  <input type="text" name="user_input" placeholder="Enter your best shot!">
+  <input type="hidden" name="initial_grid" value="<%= @grid.join(",") %>">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <input type="submit">
+</form>
